@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" herf="./css/style.css" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>IIITD-Navigating Fashion Trends in the Digital Age</title>
+    <style>
+        body {
+            font-family: 'Urbanist', sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        section {
+            padding: 20px;
+        }
+        
+        h2 {
+            color: #007bff;
+        }
+        
+        p {
+            line-height: 1.6;
+        }
+        
+        .reading {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/background9.jpeg') no-repeat center center fixed; 
+            background-size: cover;
+        }
+        
+        .reading > .header {
+            margin-top: 30px;
+            margin-left: 40px;
+            margin-bottom: 50px;
+        }
+        
+        /* Set text color to white for all elements */
+        
+        /* Set heading font to Urbanist, sans-serif */
+        h1, h2 {
+            font-family: 'Urbanist', sans-serif;
+        }
+        
+        /* Remove underline from anchor links */
+        a {
+            text-decoration: none;
+        }
+        
+        /* Set list style to none and text color to white for unordered lists */
+        ul {
+            list-style-type: none;
+        }
+        
+        /* Add hover effect for anchor links */
+        .content-link {
+            position: relative;
+            color: white;
+            transition: color 0.3s ease;
+        }
+        
+        /* Add line below text on hover */
+        .content-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        
+        /* Extend the underline across the text on hover */
+        .content-link:hover::after,
+        .content-link:focus::after {
+            width: 100%;
+        }
+        
+        .review {
+            font-weight: bold;
+        }
+        
+        .setting {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .component {
+            display: flex;
+            justify-content: center;
+            flex-direction: column; /* Adjust for responsiveness */
+            width: 100%; /* Adjust for responsiveness */
+            max-width: 1200px; /* Adjust for responsiveness */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        
+        .headings {
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            h2 {
+                font-size: 24px;
+            }
+        
+            p {
+                font-size: 14px;
+            }
+        
+            .reading > .header {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        
+            .component {
+                padding: 10px;
+            }
+        }
+        
+        .download-container, .colab-container, .dataset-container {
+            text-align: center;
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            margin-bottom: 20px;
+        }
+        
+        .download-button, .colab-link, .dataset-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .download-button:hover, .colab-link:hover, .dataset-link:hover {
+            background-color: #0056b3;
+        }
+        .results{
+            height: 300px;
+            width: 350px;
+            margin: 20px;
+            border: 1px solid black;
+
+        }
+        .re{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        
+
+
+        
+    </style>
+</head>
+<body>
+
+    <section class="reading">
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container">
+                <a class="navbar-brand text-capitalize text-white" href="./"><img src=./images/logo.png height="70px" widht="70px"></a>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active text-capitalize text-white" aria-current="page" href="./">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-capitalize text-white" href="./#research-team">About</a>
+                    </li> 
+                    <li class="nav-item">
+                    <a class="nav-link text-capitalize text-white" href="reading.html">Reading</a>
+                    </li> 
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="header">
+            <h1 class="text-white fw-bold display-4">Navigating Fashion Trends in the Digital Age</h1>
+            <h2 class="text-white fw-bold display-7">Components</h2>
+            <ul>
+                <li>
+                    <a class="text-white display-8 content-link" href="#abstract">Abstract</a>
+                </li>
+                <li>
+                    <a class="text-white display-8 content-link" href="#intro">Introduction</a>
+                </li>
+                <li>
+                    <a class="text-white display-8 content-link" href="#litreview">Literature Review</a>
+                </li>
+                <li>
+                    <a class="text-white display-8 content-link" href="#methods">Methodology</a>
+                </li>
+                <li>
+                    <a class="text-white display-8 content-link" href="#findings">Findings and Analysis</a>
+                </li>
+                <li>
+                    <a class="text-white display-8 content-link" href="#conclusion">Conclusions</a>
+                </li>
+                <li>
+                    <a class="text-white display-8 content-link" href="#limitations">Limitations</a>
+                </li>
+                <li>
+                    <a class="text-white display-8 content-link" href="#future">Future Work</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <div class="setting">
+
+    <section id="abstract">
+        <div class="abstract component">
+            <h2>Abstract</h2>
+            <p>Fashion is an essential aspect of human life. It extends beyond clothing
+                and accessories, serves as a medium for self-expression, and reflects an
+                individual's personality and cultural identity. In this study, we examine the
+                complex and dynamic relationship of fashion with celebrity culture,
+                consumer behavior and technological advancements. The first part of this
+                study focuses on celebrity culture and how they impact and shape fashion
+                trends. It also provides some important insights about consumer behavior
+                and how celebrity culture influences their choices and preferences
+                regarding fashion. The second part of the study will delve deeper into the
+                future of the fashion industry and explore new possibilities that have arisen
+                due to the influence of digital media. It will also discuss the changes that
+                fashion brands may need to consider in response to the impact of digital
+                media, particularly social media, on the fashion world.
+                Keywords: Fashion, Celebrity, Influencer, Digital age, Social media, Virtual
+                reality, Future.
+            </p>
+        </div>
+    </section>
+
+    <section id="intro">
+        <div class="intro component">
+            <h2>Introduction</h2>
+            <p>Our study, "Navigating Fashion Trends in the Digital Age," explores the influence of social media and celebrities on fashion, encompassing clothing, hair, makeup, and lifestyle. It examines how the concept of celebrity has evolved from print media to television and now to social media, where anyone can become an influencer. We focus on two themes: "Celebrities Redefining Fashion Trends?" and "Digital Evolution and Its Implications for Future Industry Trends." Additionally, we develop a machine learning model to predict consumer spending based on their views on celebrities, influencers, and the future of the fashion industry, providing valuable insights for research and analysis.
+            </p>
+        </div>
+    </section>
+    <section id="litreview">
+        <div class="litreview component">
+            <h2>Literature Review</h2>
+            <p class="lit">
+                The literature review encompasses insights from five research papers:
+            </p>
+            <p class="lit">
+                <span class="review">1. "What is social media" by Daniel Miller:</span><br> The essence of social media lies in its content, shaping and being shaped by societal dynamics. It evolved from traditional communication mediums to a blend of public broadcasting and private communication, influencing society and fashion trends.<br>
+            </p>
+            <p class="lit">
+                <span class="review">2. "AR and social media influence beauty and fashion purchases in India"</span> by Times of India: Social media platforms, particularly Instagram, significantly impact fashion purchases through augmented reality (AR) experiences, with 80% of shoppers discovering brands on meta platforms and 97% on social media.<br>
+            </p>
+            <p class="lit">
+                <span class="review">3. "The Impact of Social Media on the Fashion Industry" by Iris Mohr:</span> Social media revolutionized fashion marketing, empowering brands to engage directly with consumers. It transformed traditional business models, emphasizing exclusivity, authenticity, and personalized interactions to navigate the digital landscape successfully.<br>
+            </p>
+            <p class="lit">
+                <span class="review">4. "The Power of Influence: Traditional Celebrity vs Social Media Influencer":</span> Traditional celebrities and social media influencers shape consumer behavior differently. While traditional celebrities rely on media interviews, social media influencers foster authentic connections through constant engagement, impacting brand visibility and consumer sentiments.<br>
+            </p>
+            <p class="lit">
+                <span class="review">5. "The relationship of social media with fashion consciousness and consumer buying behavior" by Muhammad Shafiq Gul, Hamid Shahzad, and Muhammad Imran Khan:</span> Social media influences fashion consciousness and purchasing decisions, particularly among youth. While it raises awareness of trends and brands, consumers prioritize personal experiences and product quality over social media reviews.<br>
+            </p>
+            <p class="lit">
+                <span class="review">These papers collectively highlight the transformative role of social media in shaping fashion trends, consumer behavior, and industry dynamics.</span>
+            </p>
+        </div>
+    </section>
+    <section id="methods">
+        <div class="methods component">
+            <h2>Methodlogy</h2>
+            <p class="meth">In our methodology, we employed a structured approach for data collection, analysis, and model training:</p>
+
+            <p class="meth">   
+                <span class="headings"> 3.1 Literature Review:</span><br>
+                We conducted an extensive literature review of five research papers focusing on social media's impact on fashion trends and consumer behavior.
+            </p> 
+            <p class="meth">   
+                <span class="headings">3.2 Data Collection:</span><br><br>
+                <span class="headings">Types of Data:</span>
+                <br><br>
+                <span class="headings">1. Quantitative Data:</span> We conducted surveys through Google Forms, employing random, convenience, and snowball sampling techniques to reach 109 participants, achieving a response rate of 47.7%.<br><br>
+
+                <span class="headings">2. Qualitative Data:</span> We conducted semi-structured interviews with survey participants to gain deeper insights into consumer behavior.<br><br>
+            </p>   
+            <p class="meth">
+                <span class="headings">3.3 Analysis:</span><br><br>
+                <span class="headings">1. Quantitative Analysis:</span><br>
+                We analyzed survey data using statistical tools, including descriptive analysis, data visualizations, and Markov chains, to identify patterns and trends.<br><br>
+                <span class="headings">2. Qualitative Analysis:</span><br>
+                Thematic analysis and content analysis were used to identify key themes and narratives in the fashion industry.<br><br>
+            </p> 
+            <p class="meth">
+                <span class="headings">3.4 Data Extraction:</span><br><br>
+                <span class="headings">3.4.1 Collection of Data:</span><br>
+                We collected survey data through Google Forms, primarily targeting IIIT Delhi students.<br><br>
+                <span class="headings">3.4.2 Pre-processing of Data:</span><br>
+                1. Feature Selection: Eight data parameters were selected for detailed analysis of their impact on spending per shopping trip.<br>
+                2. Data Encoding: Categorical and qualitative data were encoded into numerical values.<br>
+                3. Feature Scaling: Features were scaled or normalized to ensure similar scales for improved model performance.<br>
+                4. Target Variable: The target variable, "Money" representing spending on fashion per trip, was identified.<br>
+                <br>
+                <span class="headings">3.4.3 Data Splitting:</span><br>
+                The dataset was divided into training and testing sets for model training and evaluation.<br><br>
+                <span class="headings">3.4.4 Model Training:</span><br>
+                Multiple Linear Regression and Random Forest models were selected and trained using the training data to learn patterns and relationships.<br><br>
+                <span class="headings">3.4.5 Model Evaluation:</span><br>
+                The performance of the trained models was evaluated using the testing data to assess their effectiveness.<br>
+            </p>
+        </div>
+    </section>
+    <section id="findings">
+        <div class="findings component">
+            <h2>Findings and Analysis</h2>
+            <p>The study explores the influence of celebrities and social media on fashion trends and consumer behavior. The survey revealed that a majority of respondents were influenced by celebrities in their fashion choices, with women being more susceptible to this influence. Celebrities were also found to have a significant impact on brand switching and spending habits. Social media platforms emerged as the primary source for staying updated on fashion trends, particularly among younger demographics.</p>
+            <div class="re"><img src="./images/Result1.jpeg" alt="Results1" class="results"/>
+            </div>
+            <p>
+                The study also examined the future impact of digital platforms on the fashion industry. Social media was expected to have an increasing influence on future fashion trends, while virtual try-on experiences and AI recommendations were also seen as potential game-changers. Sustainability emerged as a key concern, with a significant portion of respondents preferring environmentally-friendly fashion products over celebrity-endorsed ones.</p>
+            <div class="re"><img src="./images/Result2.jpeg" alt="Results2" class="results" /></div>
+            <p>
+                The findings highlight the need for fashion brands to strategize their social media presence, incorporate virtual try-on experiences, and prioritize sustainability in their offerings. The study also suggests a potential shift towards personalized fashion in the future.
+            </p>
+            <div class="re"><img src="./images/Result3.jpeg" alt="Results3" class="results" /></div>
+        </div>
+    </section>
+    <section id="conclusion">
+        <div class="conclusion component">
+            <h2>Conclusion</h2>
+            <p>The study explored the interplay between celebrity culture, fashion trends, and consumer behavior, noting both the prevalence of celebrity influence and resistance to it. It found that mid-range consumers are most influenced by celebrities, with aspirations driving purchasing decisions. The future of fashion entails a significant shift, emphasizing digital presence, AI integration, and sustainable practices. Social media remains pivotal. The study's ML model assesses individual spending based on shopping frequency and examines the influence of celebrities and emerging digital platforms on fashion trends. Personalization and ethical marketing are highlighted as crucial for future success.
+            </p>
+        </div>
+    </section>
+    <section id="limitations">
+        <div class="limitations component">
+            <h2>Limitations</h2>
+            <p>
+                In this paper, we try to analyze in as much detail as possible about the
+                “influence of celebrities on fashion” and “Digital Evolution and Its Implications for
+                Future Industry Trends” but there is always a scope for improvement, so here
+                are some limitation in our research work:
+            </p>
+            <p>
+                (i) Demographic of the people: In our research, we collected our most of
+                the data from the students of IIIT-Delhi, so first of all, most of the
+                participants are students who usually have less spending capacity and they
+                are from IIIT-Delhi collage, so it's not accurate to generalized this research
+                to people of all age groups and other geographical locations.
+            </p>
+            <p>
+                (ii) Upgradation in technology: While predicting the future trends in
+                fashion industry, we made our predictions on the basis of current
+                technologies like social media and virtual reality(VR), if any new technology
+                emerges suddenly in near future which is completely different from what we
+                have today, our research may not be able follow accurately.
+            </p>
+            <p>
+                (iii) Existing biases: The persons who participated in our survey or data
+                collection process, may have some preconceived notions and biases which
+                can affect our research and result.
+            </p>
+        </div>
+    </section>
+    <section id="future">
+        <div class="future component">
+            <h2>Future Work</h2>
+            <p>
+                During our research, we meticulously collected and analyzed data in a
+                robust manner using statistical tools. Our next objective is to leverage this
+                data and our analytical findings to construct comprehensive datasets.
+                Subsequently, we plan to use these datasets to train machine learning
+                models that can predict outcomes more accurately based on selected
+                parameters tailored to user needs. Additionally, our research work can be
+                useful for the fashion designers and fashion brands to know their customer
+                profile in detail, which can help them to perform their business operations
+                more efficiently and profitably. Future research can build upon our study by exploring the profound implications of AI-driven recommendation systems and virtual try-on technology on the fashion industry.
+            </p>
+        </div>
+    </section>
+</div>
+    <hr>
+    <section id="extra">
+        <section id="download-section">
+            <div class="download-container">
+                <h2>Download Full Report</h2>
+                <p>Click the button below to download the full report PDF:</p>
+                <a class="download-button" href="https://drive.google.com/file/d/1oKYFUdow5WF7QTklIhONcyfE33kZapQv/view?usp=sharing" download target="_blank"> Download PDF</a>
+            </div>
+        </section>
+        
+        <section id="colab-section">
+            <div class="colab-container">
+                <h2>Access Google Colab</h2>
+                <p>Click the link below to access the Google Colab notebook:</p>
+                <a class="colab-link" href="https://colab.research.google.com/drive/1djZItd-07tsRTZnF9kjqsqdvA7t7pLN1?authuser=0#scrollTo=zx_DEKu6fhtA" target="_blank">Google Colab</a>
+            </div>
+        </section>
+        <section id="dataset-section">
+            <div class="dataset-container">
+                <h2>Download Dataset</h2>
+                <p>Click the link below to download the dataset in Google Sheets format:</p>
+                <a class="dataset-link" href="https://docs.google.com/spreadsheets/d/1WkXNFKyd9FVwzVnFnyZinJlDKkz5IXgbFKJ5B15XROI/edit#gid=0" download target="_blank">Download Dataset</a>
+            </div>
+        </section>
+        
+    </section>
+    <hr>
+    <section class="footer">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="./" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="./#research-team" class="nav-link px-2 text-body-secondary">About</a></li>
+            <li class="nav-item"><a href="reading.html" class="nav-link px-2 text-body-secondary">Reading</a></li>
+          </ul>
+          <p class="text-center text-body-secondary">© 2024 BTP</p>
+        </footer>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+.start {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/background9.jpeg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+.navbar {
+    background-color: transparent !important; /* Ensures navbar is transparent */
+}
+
+/* h1,h2,h3,h4,h5{
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--bs-dark-color);
+}
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    line-height: 3rem;
+    font-weight: 600;
+    font-size: 3.4rem;
+} */
+/* Base style for navbar links */
+
+.navbar-nav .nav-link {
+    position: relative; /* Position relative to allow absolute positioning of pseudo-elements */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Create a line below the text on hover using ::after pseudo-element */
+.navbar-nav .nav-link::after {
+    content: ''; /* Required for ::after to work */
+    position: absolute; /* Position relative to the link */
+    bottom: 4px; /* Positioning the line just below the text */
+    left: 0; /* Start from the left edge */
+    width: 0%; /* Start with no line */
+    height: 3px; /* Thickness of the underline */
+    background-color: #007BFF; /* Color of the underline, change as needed */
+    transition: width 0.3s ease; /* Transition for the underline effect */
+}
+
+/* Extend the underline across the text on hover */
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after {
+    width: 100%; /* Full width of the text */
+}
+
+
+.button-style {
+    display: inline-block; /* Allows the use of padding and maintains the flow as text */
+    padding: 10px 20px; /* Top and bottom padding 10px, left and right padding 20px */
+    background-color: #007BFF; /* Standard Bootstrap primary color; change as needed */
+    color: white; /* White text color */
+    text-align: center; /* Center the text inside the link */
+    text-decoration: none; /* Removes underline from the link */
+    border-radius: 25px; /* Rounded corners with a radius of 25px */
+    font-weight: bold; /* Makes the font bold */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.button-style:hover, .button-style:focus {
+    background-color: #0056b3; /* Darker shade of blue on hover/focus */
+    color: white; /* Ensures text remains white on hover/focus */
+    text-decoration: none; /* Continues to remove underline on hover/focus */
+}
+.about {
+    text-align: center;
+    padding: 50px; /* Adjust padding as needed */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow elements to wrap to the next line */
+}
+
+.col-lg-4 {
+    flex-basis: calc(33.333% - 20px); /* Set width to one-third of the container with margin */
+    margin-bottom: 20px; /* Add space between rows */
+    background-color: #f9f9f9; /* Initial background color */
+    padding: 0px; /* Add padding to each column */
+}
+
+.col-lg-4:hover {
+    background-color: #f0f0f0; /* Light gray background color on hover */
+}
+
+.col-lg-4 img {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%; /* Make the image round */
+    margin-top: 20px;
+    margin-bottom: 10px; /* Add some space between the image and text */
+}
+
+
+
+
+#hero>h1{
+    color: white;
+}
+#advisor-section {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+
+#advisor-section > h1 {
+    font-size: 36px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.advisor-profile {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden; /* Ensure content doesn't overflow on small screens */
+}
+
+.advisor-profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.advisor-profile h2 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.advisor-profile p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.advisor-profile a {
+    display: block;
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+    .advisor-profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .advisor-profile p {
+        font-size: 14px;
+    }
+}
+
+
+
+#research-team {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+}
+#research-team h1{
+    font-size: 45px;
+    font-weight: bold;
+
+}
+#profiles-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile {
+    width: 320px;
+    margin: 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.profile img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.profile h2 {
+    margin-top: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.profile p {
+    font-size: 15px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.profile a {
+    display: block;
+    text-decoration: none;
+    color: #007bff;
+}
